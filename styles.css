@@ -1,0 +1,569 @@
+/* Tailwind CSS Import */
+@import 'https://cdn.jsdelivr.net/npm/tailwindcss@4.0.17/index.min.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;700&display=swap');
+
+/* Custom Gradient */
+.bg-gradient-nav {
+    background: linear-gradient(to right, #0D1B36, #154375);
+}
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+    background-color: #E7E8E7;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+h2,
+h3,
+header {
+  color: #2069B0;
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: 500;
+}
+
+.aboutmecard {
+  border-width: 1px; 
+  border-color: #2069B0;
+  background-color: #e1e2e1;
+}
+
+/* Skill Logos Styling */
+.skill-icon {
+    width: 50px; 
+    height: 50px; 
+    border-radius: 8px; 
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill-icon:hover {
+    transform: scale(1.1); /* Slight growth effect */
+    cursor: pointer;
+}
+
+
+/* Skill Text Styling */
+.skill-text {
+    font-size: 0.875rem; /* Tailwind's text-sm */
+    font-weight: 500; 
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease-in-out;
+}
+
+
+
+/* From Uiverse.io by Admin12121 */ 
+.menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+  
+.link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 50px;
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transform-origin: center left;
+    transition: width 0.2s ease-in;
+    text-decoration: none;
+    color: inherit;
+    &:before {
+      position: absolute;
+      z-index: -1;
+      content: "";
+      display: block;
+      border-radius: 8px;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      transform: translateX(100%);
+      transition: transform 0.2s ease-in;
+      transform-origin: center right;
+    }
+  
+    &:hover,
+    &:focus {
+      outline: 0;
+      width: 150px;
+  
+      &:before,
+      .link-title {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+}
+  
+.link-icon {
+    width: 28px;
+    height: 28px;
+    display: block;
+    flex-shrink: 0;
+    left: 18px;
+    position: absolute;
+    svg {
+      width: 28px;
+      height: 28px;
+    }
+}
+  
+.link-title {
+    transform: translateX(100%);
+    transition: transform 0.2s ease-in;
+    transform-origin: center right;
+    display: block;
+    text-align: center;
+    text-indent: 30px;
+    width: 100%;
+}
+  
+
+
+
+/* From Uiverse.io by Javierrocadev */ 
+.card {
+    width: 300px;
+    height: relative;
+    background: #e1e2e1;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    color: #212121;
+    border: 2px solid #184fa8;
+    transition: all .5s ease;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  
+  .icons {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+  }
+  
+  .image {
+    width: 300px;
+    height: 148px;
+    object-fit: cover;
+    background: #2A394F;
+  }
+  
+  .more {
+    background: #184fa8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .see-link {
+    background: #184fa8;
+    border: none;
+    border-radius: 5px;
+    color: white;
+  }
+  
+  .more, .see-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+    padding: 5px;
+  }
+  
+  .more__icon, .see-link__icon {
+    width: 15px;
+    fill: white;
+  }
+  
+  .card__info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 15px;
+    gap: 3px;
+  }
+  
+  .page {
+    font-size: 13px;
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .title {
+    text-decoration: none;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    color: black;
+  }
+  
+  .content {
+    font-size: 14px;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .card:hover .icons {
+    z-index: 1;
+    opacity: 1;
+  }
+  
+  .card:hover .image {
+    filter: brightness(.8);
+  }
+  
+  .card:hover .title {
+    color: #184fa8;
+  }
+
+  .tech-icon {
+    width: 18px;
+    height: 18px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+
+
+.tooltip-container {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 17px;
+  /*padding: 0.7em 1.8em;*/
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tooltip-container .borde-back {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: none;
+}
+
+.tooltip-container .icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+
+.tooltip {
+  position: absolute;
+  top: -2;
+  z-index: -10;
+  transform: scaleX(0);
+  transform-origin: left center;
+  margin-left: 5px;
+  height: 50px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.6s;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding-right: 16px;
+  color: #03A0DC;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: 800px;
+  padding-left: 40px;
+  margin-left: -50px;
+  left: 100%;
+}
+
+.tooltip-container:hover .tooltip {
+  transform: unset;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  z-index: -10;
+}
+
+.tooltip-container:hover {
+  transform: translateX(-0px);
+  transition: 0.5s linear;
+}
+
+.tooltip-container:hover .icon {
+  transform: rotate(90deg);
+  transition: 0.3s linear;
+}
+
+.hr {
+  width: 100%;
+  height: 3px;
+  display: block;
+  position: relative;
+  margin-bottom: 0em;
+  padding: 2em 0;
+}
+
+.hr::before,
+.hr::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 50%;
+  left: 0;
+}
+
+.hr::before {
+  background: linear-gradient(90deg, #03A0DC 0%, #03A0DC 50%, transparent 50%, transparent 100%);
+  background-size: 60px;
+  background-position: center;
+  z-index: 1;
+}
+
+.hr::after {
+  background: #E7E8E7;
+  background-size: 200% 100%;
+  background-position: 0% 50%;
+  animation: bar 15s linear infinite;
+}
+
+@keyframes bar {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+.hr.anim::before {
+  background-size: 60px;
+  background-position: center;
+  animation: bar 120s linear infinite;
+}
+
+ 
+.custom-shape-divider-bottom-1743515316 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  z-index: 1;
+}
+
+.custom-shape-divider-bottom-1743515316 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 75px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1743515316 .shape-fill {
+  fill: #E7E8E7;
+}
+
+.custom-shape-divider-top-1743515876 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1743515876 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 40px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1743515876 .shape-fill {
+  fill: #E7E8E7;
+}
+
+
+#home,
+#contact {
+  position: relative;
+}
+
+
+/* Modal styling */
+#project-modal-overlay {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: none; /* Start hidden */
+}
+
+#project-modal-overlay.active {
+  opacity: 1;
+  display: flex !important;
+}
+
+.project-modal-container {
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+  background: linear-gradient(to bottom right, #f8f9fa, #e9ecef);
+  border-top: 4px solid #2069B0;
+  max-height: 90vh; /* Set maximum height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  overscroll-behavior: contain; /* Improve mobile scrolling */
+}
+
+#project-modal-overlay.active .project-modal-container {
+  transform: translateY(0);
+}
+
+/* Add smooth scrolling behavior */
+.project-modal-container {
+  scroll-behavior: smooth;
+}
+
+/* Ensure proper padding at bottom of modal for better UX */
+#project-modal-content {
+  padding-bottom: 2rem;
+}
+
+/* Project detail content styling */
+.project-detail h2 {
+  color: #0D1B36;
+  border-bottom: 2px solid #2069B0;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-detail h3 {
+  color: #154375;
+}
+
+.project-detail h4 {
+  color: #2069B0;
+}
+
+.project-detail ul li {
+  margin-bottom: 0.25rem;
+}
+
+#star-logo {
+  position: absolute;
+  z-index: 1;
+  opacity: 0.1; /* Adjust this value as needed for desired transparency */
+  max-width: 80%; /* Adjust as needed */
+  max-height: 80%; /* Adjust as needed */
+  pointer-events: none; /* This ensures clicks go through to elements behind */
+  left: -15%; /* This positions 50% of the image beyond the left edge */
+}
+
+#home .container {
+  position: relative;
+  z-index: 2; /* This ensures text stays on top of the logo */
+}
+
+/* From Uiverse.io by ernestnash */ 
+.btn {
+  display: inline-block;
+  padding: 0.9rem 1.8rem;
+  border: 3px solid #2069B0;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  overflow: hidden;
+  z-index: 1;
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: 700;
+  color: #0D1B36;
+  border-radius: 10px;
+ }
+ 
+ .btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2069B0;
+  transform: translateX(-100%);
+  transition: all .3s;
+  z-index: -1;
+ }
+ 
+ .btn:hover::before {
+  transform: translateX(0);
+ }
+
+ .skill-item {
+  cursor: pointer;
+  position: relative;
+  margin: 20px;
+  text-align: center;
+}
+
+.popup-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.popup-image {
+  max-width: 80%;
+  max-height: 80%;
+  pointer-events: none;
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+
+.clickable-image {
+  cursor: pointer;
+}
